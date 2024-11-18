@@ -19,7 +19,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Manuel den Hartog
 
   #### Je startniveau:
-  rood/zwart
+  rood
 
   #### Je focus:
   Responsive
@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  https://quadangles.com/
+  https://zentry.com/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   home 
-  <img src="readme-images/pagina-1.png" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/pagina-1.JPG" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   about
-  <img src="readme-images/pagina-2.png" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/pagina-2.JPG" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
@@ -57,7 +57,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  - Je moet heel veel zelf doen op de website (scrollen), waardoor je langer doet om door de website heen te gaan als je concentratieproblemen hebt. Ook zijn er op heel veel plekken in 1 viewport info te vinden waardoor je op veel plekken moet gaan rondkijken dat is ook lastiger als je geen concentratie hebt.
+  - De afbeeldingen zijn helemaal schermvullend dus moet je veel rondkijken als je de bril op hebt met een klein gaatje.
+  - Met een spasmes/parkinson nabootser is het vrijwel onmogelijk om op een website goed rond te navigeren
 
+  - De voiceover op mijn site werkte niet heel goed maar dat kwam denk ik omdat ik de controls niet snap, als ik er door heen tabte ging hij namelijk alleen maar naar alle linkjes toe en niet naar het volgende element.
 </details>
 
 

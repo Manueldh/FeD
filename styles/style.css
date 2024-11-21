@@ -6,8 +6,24 @@
 }
 
 
+@font-face {
+	font-family: "Roobert";
+	src: url(../fonts/Roobert-Medium.woff2) format('woff2'); 
 
+	font-weight: 500;
+}
+@font-face {
+	font-family: "Roobert";
+	src: url(../fonts/Roobert-Regular.woff2) format('woff2'); 
 
+	font-weight: 400;
+}
+@font-face {
+	font-family: "zentryFont";
+	src: url(../fonts/ZENTRY-Regular.woff2) format('woff2');
+
+	font-weight: normal;
+}
 
 
 /*********************/
@@ -28,4 +44,25 @@
 /****************/
 
 /* jouw code */
+h1 {
+	font-family: zentryFont, "Arial";
+	font-size: 10rem;
+}
 
+.special-letter {
+	font-feature-settings: "ss01" on;
+}
+
+
+header nav img {
+	width: 100px;
+}
+
+main section:nth-of-type(1) video {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -1;
+}

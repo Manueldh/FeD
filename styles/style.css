@@ -2,7 +2,10 @@
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing:border-box; 
+  font-family: Roobert, "Arial"; 
+  padding: 0;
+  margin: 0;
 }
 
 
@@ -33,6 +36,10 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
+	--light-blue:#DFDEF0;
+	--black:#000101;
+
+	--zentry-yellow: #ECFF67;
 }
 
 
@@ -46,23 +53,221 @@
 /* jouw code */
 h1 {
 	font-family: zentryFont, "Arial";
-	font-size: 10rem;
+	font-size: 7rem;
+	color: var(--light-blue);
+	text-align: center;
+	line-height: 90%;
+	margin-bottom: auto;
 }
 
 .special-letter {
+	font-family: zentryFont, "Arial";
 	font-feature-settings: "ss01" on;
 }
 
+a {
+	padding: 1em 2em;
+	background-color: var(--light-blue);
+	border-radius: 2em;
+	color: var(--black);
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 0.7em;
+}
 
-header nav img {
-	width: 100px;
+button {
+	padding: 1em 2em;
+	background-color: var(--zentry-yellow);
+	border-radius: 2em;
+	color: var(--black);
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 0.7em;
+	width: fit-content;
+}
+
+
+
+
+
+/****************/
+/* NAVIGATIE */
+/****************/
+
+header {
+	display: flex;
+	background-color: black;
+	align-items: center;
+	gap: 1em;
+	padding: 0.5em 1em;
+	justify-content: space-between;
+	z-index: 10;
+}
+
+header a {
+	z-index: 5;
+}
+
+header a:nth-of-type(2) {
+	margin-right: auto;
+}
+
+header img {
+	width: 50px;
+	background-color: transparent;
+	z-index: 5;
+}
+
+header nav {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 2;
+
+	background-color: var(--zentry-yellow);
+	translate: -100% 0%;
+}
+
+nav.toonMenu {
+	translate: 0% 0%;
+}
+
+header nav ul {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+
+	position: fixed;
+	top: 10vh;
+}
+
+header nav ul li {
+	list-style: none;
+}
+
+header nav ul li a{
+	font-family: zentryFont, "Arial";
+	font-size: 5em;
+	color: black;
+	text-decoration: none;
+	background-color: transparent;
+	padding: 1em 1em;
+}
+
+header button {
+	background-color: transparent;
+	border: none;
+	width: 4em;
+	padding: initial;
+}
+header button img {
+	width: 100%;
+}
+header button:nth-of-type(1) {
+	display: block;
+	z-index: 5;
+}
+.removeBtn{
+	display: none;
+	width: 1px;
+}
+.showBtn {
+	display: block !important;
+}
+
+/****************/
+/* HOME EERSTE SECTION */
+/****************/
+
+main section:nth-of-type(1) {
+	height: 90vh;
+	position: relative;
+}
+main section:nth-of-type(1) p{
+	color: white;
+	position: absolute;
+	bottom: 0.5em;
+	left: 0.5em;
+}
+main section:nth-of-type(1) button {
+	position: absolute;
+	bottom: 0.5em;
+	right: 0.5em;
 }
 
 main section:nth-of-type(1) video {
 	position: absolute;
-	right: 0;
-	bottom: 0;
-	min-width: 100%;
-	min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Pas aan naar gewenste breedte */
+    height: 100%; /* Houd de aspect-ratio van de video */
+	object-fit: cover;
 	z-index: -1;
 }
+
+
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) { 
+	#firstBtn, #secondBtn {
+		display: none;
+	}
+ }
+
+
+
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (min-width: 576px) {  }
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 768px) {  }
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 992px) { 
+	
+ }
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 1200px) { 
+	header button {
+		display: none;
+		width: 0px;
+	}
+	header nav {
+		position: relative;
+		width: inherit;
+		height: inherit;
+
+		background-color: transparent;
+		translate: 0% 0%;
+	}
+	header nav ul {
+		position: relative;
+		top: inherit;
+		flex-direction: row;
+	}
+	header nav ul li a {
+		font-family: Roobert, "Arial"; 
+		color: white;
+		font-size: 1em;
+	}
+ }
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (min-width: 1400px) {  }
+
+
+
+
+
+/* Vragen:
+ - Wat is handiger bij eerste section, flex of grid? Ik persoonlijk vind flex handiger maar moet dan een div erbij maken.
+
+ - hoe center ik de video?
+*/

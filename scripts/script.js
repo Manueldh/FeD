@@ -10,15 +10,15 @@ closeBtn.addEventListener("click", closeMenu)
 function openMenu() {
     headerNav.classList.add("toonMenu")
     burgerBtn.classList.add("removeBtn")
-    firstNavBtn.classList.add("showBtn")
-    secondNavBtn.classList.add("showBtn")
+    // firstNavBtn.classList.add("showBtn")
+    // secondNavBtn.classList.add("showBtn")
     closeBtn.classList.remove("removeBtn")
 }
 
 function closeMenu() {
     headerNav.classList.remove("toonMenu")
     burgerBtn.classList.remove("removeBtn")
-    closeBtn.classList.add("removeBtn")
-    firstNavBtn.classList.remove("showBtn")
+    // closeBtn.classList.add("removeBtn")
+    // firstNavBtn.classList.remove("showBtn")
     secondNavBtn.classList.remove("showBtn")
 }

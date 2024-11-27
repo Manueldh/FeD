@@ -6,6 +6,7 @@
   font-family: Roobert, "Arial"; 
   padding: 0;
   margin: 0;
+  line-height: 90%;
 }
 
 
@@ -40,9 +41,14 @@
 	--black:#000101;
 
 	--zentry-yellow: #ECFF67;
+	--gray: #585961;
+	--purple: #672EF4;
 }
 
 
+body {
+	background-color: var(--light-blue);
+}
 
 
 
@@ -51,13 +57,33 @@
 /****************/
 
 /* jouw code */
+section {
+	padding: 4em 1em;
+}
+
 h1 {
 	font-family: zentryFont, "Arial";
-	font-size: 7rem;
+	font-size: 7em;
 	color: var(--light-blue);
 	text-align: center;
-	line-height: 90%;
 	margin-bottom: auto;
+}
+h2 {
+	font-size: 0.75em;
+	text-transform: uppercase;
+}
+h3 {
+	font-family: zentryFont, "Arial";
+	font-size: 4em;
+	text-align: center;
+}
+h4 {
+	font-family: zentryFont, "Arial";
+	font-size: 3em;
+}
+
+p {
+	line-height: 140%;
 }
 
 .special-letter {
@@ -183,23 +209,23 @@ header button:nth-of-type(1) {
 /* HOME EERSTE SECTION */
 /****************/
 
-main section:nth-of-type(1) {
+.home-first-section {
 	height: 90vh;
 	position: relative;
 }
-main section:nth-of-type(1) p{
+.home-first-section p{
 	color: white;
 	position: absolute;
 	bottom: 0.5em;
 	left: 0.5em;
 }
-main section:nth-of-type(1) button {
+.home-first-section button {
 	position: absolute;
 	bottom: 0.5em;
 	right: 0.5em;
 }
 
-main section:nth-of-type(1) video {
+.home-first-section video {
 	position: absolute;
     top: 50%;
     left: 50%;
@@ -210,12 +236,164 @@ main section:nth-of-type(1) video {
 	z-index: -1;
 }
 
+/****************/
+/* HOME TWEEDE SECTION */
+/****************/
 
+.home-second-section {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	justify-content: center;
+}
+
+.pathwrapper {
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+	justify-content: center;
+}
+
+.image-container{
+    /* clip-path: path("m275.612 156.881 L 275.612 156.881 Q 283.5 158.216 284.714 166.123 L 345.771 564.011 Q 346.984 571.919 339.002 572.459 L 78.1283 590.129 Q 70.1465 590.67 69.8623 582.675 L 53.6743 127.27 Q 53.3901 119.276 61.278 120.61"); */
+	width: auto;
+	height: 100%;
+	/* clip-path: polygon(6% 0, 100% 9%, 75% 100%, 20% 100%); */
+	mask-image: url(../images/clipping-mask.svg);
+	mask-size:contain;
+	mask-repeat: no-repeat;
+	transform: scale(.7);
+}
+
+.home-second-section img{
+	/* transform-origin: center center;
+	object-position: center;
+	object-fit:fill; */
+	
+	width: 100vw;
+	height: 100%;
+	object-fit: cover;
+	
+}
+
+/****************/
+/* HOME DERDE SECTION */
+/****************/
+
+.home-third-section {
+	background-color: var(--black);
+	color: white;
+	padding: 10em 15%;
+}
+.grid-wrapper{
+	display: grid;
+}
+.home-third-section h2 {
+	text-transform:none;
+	font-size: 1em;
+}
+.home-third-section > p{
+	opacity: 40%;
+	margin-bottom: 2em;
+}
+
+.home-third-section article {
+	position: relative;
+	margin-bottom: 1em;
+	overflow: hidden;
+	padding: 1em;
+	border: 1px rgba(255, 255, 255, 0.4) solid;
+	border-radius: 1em;
+	display: flex;
+	flex-direction: column;
+}
+.home-third-section button, .home-third-section a {
+	display: block;
+	width: fit-content;
+	height: fit-content;
+	position: absolute;
+	bottom: 1em;
+	z-index: 1;
+	background-color: var(--black);
+	color: var(--gray);
+	border: var(--gray) 1px solid;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.home-third-section article h4,
+.home-third-section article p {
+	position: relative;
+	z-index: 1;
+}
+
+.home-third-section article video {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Pas aan naar gewenste breedte */
+    height: 100%; /* Houd de aspect-ratio van de video */
+	object-fit: cover;
+	z-index: 0;
+}
+
+.home-third-section article:nth-of-type(1){
+	height: 400px;
+
+}
+
+.home-third-section article:nth-of-type(2){
+	gap: 1em;
+	width: 70%;
+	margin-left: auto;
+}
+
+.home-third-section article:nth-of-type(2) a, .home-third-section article:nth-of-type(2) button {
+	position:initial;
+}
+
+.home-third-section article:nth-of-type(2) a{
+	color: var(--zentry-yellow);
+	border: var(--zentry-yellow) 1px solid;
+}
+.home-third-section article:nth-of-type(3) {
+	height: 300px;
+	width: 80%;
+}
+.home-third-section article:nth-of-type(4) {
+	height: 500px;
+	width: 80%;
+	margin-left: auto;
+}
+.home-third-section article:nth-of-type(5){
+	background-color: var(--purple);
+	border: none;
+	width: 50%;
+	height: 230px;
+	color: black;
+	position: relative;
+}
+.home-third-section article:nth-of-type(5) img {
+	width: 20%;
+	position: absolute;
+	right: 1em;
+	bottom: 1em;
+}
+.grid-wrapper > video {
+	display: none;
+}
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 576px) { 
 	#firstBtn, #secondBtn {
 		display: none;
+	}
+	.home-third-section {
+		padding: 2em 1.5em;
 	}
  }
 
@@ -230,7 +408,39 @@ main section:nth-of-type(1) video {
 
 /* Medium devices (tablets, less than 992px) */
 @media (min-width: 992px) { 
-	
+	.grid-wrapper{
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-column-gap: 016px;
+		grid-row-gap: 016px;
+	}
+.home-third-section article{
+	margin-bottom: 0 !important;
+	width: auto !important;
+	height: auto !important;
+}
+
+	.home-third-section article:nth-of-type(1){
+		grid-area: 1 / 1 / 2 / 3;
+	}
+	.home-third-section article:nth-of-type(2){
+		grid-area: 2 / 2 / 3 / 3;
+	}
+	.home-third-section article:nth-of-type(3){
+		grid-area: 3 / 2 / 4 / 3;
+	}
+	.home-third-section article:nth-of-type(4){
+		grid-area: 2 / 1 / 4 / 2;
+	}
+	.home-third-section article:nth-of-type(5){
+		grid-area: 5 / 1 / 6 / 2;
+	}
+	.grid-wrapper > video {
+		grid-area: 5 / 2 / 6 / 3; 
+		width: 100%;
+		display: block;
+		border-radius: 1em;
+	}
  }
 
 /* Large devices (desktops, less than 1200px) */
@@ -266,8 +476,24 @@ main section:nth-of-type(1) video {
 
 
 
-/* Vragen:
- - Wat is handiger bij eerste section, flex of grid? Ik persoonlijk vind flex handiger maar moet dan een div erbij maken.
+/* Feedbackgesprek:
+ 
+- background images in css ipv img in html
+ 	- bg images niet in css maar gw als html.
 
- - hoe center ik de video?
-*/
+ - title en favicon aanpassen
+ - h1 voor video zetten in hero header --------
+ - video z index bij articles om ze te laten afspelen bij hover
+ - kleine articles worden list items
+ - header > a ipv ID
+ - header class zodat je maar 1 class hebt.
+ - nav in footer in list
+
+ - in readme de accesibilty test heel uitgebreid doen, dus echt met kopjes van: contrast, screenreader controls, etc.
+
+
+
+
+
+ - waar komt extra gap in mijn grid vandaan?
+ */

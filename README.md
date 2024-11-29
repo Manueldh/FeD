@@ -131,12 +131,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Manuel      | Vincent          | Nerusha    | student 4        |
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
+  - Punten Manuel:
+    - Extra gap in mijn grid
+    - Videos autoplay en loop. 
+    - Div gebruiken ipv section als je geen heading hebt
+
+  - Punten Vincent:
+    - Beste manier voor carousel die weer terug komt bij het begin
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen

@@ -70,7 +70,7 @@ h1 {
 	margin-bottom: auto;
 }
 h2 {
-	font-size: 0.75em;
+	font-size: 1.25em;
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -101,7 +101,7 @@ a {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: 600;
-	font-size: 0.7em;
+	font-size: 1.2em;
 	display: block;
 	width: fit-content;
 }
@@ -211,6 +211,98 @@ header button:nth-of-type(1) {
 .showBtn {
 	display: block !important;
 }
+
+/****************/
+/* FOOTER */
+/****************/
+
+footer {
+	background-color: var(--blue);
+	position: relative;
+}
+
+footer a {
+	background-color: transparent;
+	padding: .3em 0;
+	text-transform: none;
+	font-size: 1.5em;
+	transition: .3s ease-in-out;
+}
+
+footer li {
+	transition: .3s ease-in-out;
+	width: fit-content;
+}
+footer li:hover{
+	border-radius: .2em;
+	clip-path: polygon(0 0, 95% 18%, 100% 100%, 8% 100%);
+	background-color: var(--black);
+	color: var(--blue);
+	transform: translate(-10%);
+	padding: .2em 1.5em;
+}
+footer li:hover a {
+	color: var(--blue);
+}
+
+.full-width-text{
+	text-align: justify;
+  	font-size: 9.5vw;
+}
+.full-width-text::after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+}
+
+footer img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 4em;
+	height: 4em;
+}
+
+.footer-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 6em 3em;
+	
+	padding-left: 20%;
+	position: relative;
+	width: 100%;
+}
+footer h2 {
+	text-align: start;
+	font-size: 1em;
+	margin-bottom: 1.5em;
+}
+
+.footer-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5em 1em 1em 1em;
+}
+
+.footer-bottom > p, .footer-bottom > a {
+	text-transform: uppercase;
+	font-size: 1em;
+	font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /****************/
 /* HOME EERSTE SECTION */
@@ -637,7 +729,7 @@ header button:nth-of-type(1) {
 .home-seventh-section > ul > li:nth-of-type(4) img {
 	position: absolute;
 	bottom: 0;
-	width: 400px;
+	width: 100%;
 }
 .home-seventh-section > ul > li:nth-of-type(5) {
 	border: .5px var(--gray) solid;
@@ -757,42 +849,66 @@ header button:nth-of-type(1) {
 /* HOME TIENDE SECTION */
 /****************/
 .home-tenth-section {
-	padding: 10em 2em;
+	padding: 10em 1em;
 }
 
 .home-tenth-section article{
 	background-color: var(--black);
 	position: relative;
 	color: var(--light-blue);
-	padding: 20em 2em;
+	padding: 12em 1em;
 	border-radius: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2em;
 }
 
 .home-tenth-section img{
 	width: 100%;
 }
 
-.swords-image{
-	height: 400px;
+.swords-image-container {
 	position: absolute;
-	top: -50px;
+	top: 10%;
 	left: 50%;
-	transform: translate(-50%);
-	width: 70%;
-}
-.swords-image  img{
-	object-fit: cover;
-	position: absolute;
-	top: -200px;
-	left: 0;
-	width: 120%;
-}
-.clip-path-holder {
-	clip-path: polygon(27% 0, 100% 8%, 83% 70%, 0 70%);
-	height: 500px;
-	width: 100%;
+	transform: translate(-50%, -50%);
+	transform-origin: center;
+	z-index: 1;
 }
 
+.swords-image{
+	height: 500px;
+	width: 300px;
+	position: relative;
+}
+.swords-image img{
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+}
+.clip-path-holder {
+	clip-path: polygon(12% 18%, 100% 27%, 83% 100%, 0 91%);
+	height: 500px;
+	width: 300px;
+}
+
+.home-tenth-section h2 {
+	position: relative;
+	z-index: 3;
+}
+.home-tenth-section h3 {
+	font-size: 5em;
+}
+
+.home-tenth-section article > img:last-of-type{
+	width: 300px;
+	height: 200px;
+	position: absolute;
+	bottom: 0;
+	object-fit: cover;
+	clip-path: polygon(27% 0, 100% 45%, 88% 100%, 44% 100%, 0 67%);
+}
 
 
 
@@ -819,7 +935,11 @@ header button:nth-of-type(1) {
 @media (min-width: 576px) {  }
 
 /* Small devices (landscape phones, less than 768px) */
-@media (min-width: 768px) {  }
+@media (min-width: 768px) { 
+	section {
+		padding: 4em 20vw;
+	}
+ }
 
 /* Medium devices (tablets, less than 992px) */
 @media (min-width: 992px) { 
@@ -829,11 +949,11 @@ header button:nth-of-type(1) {
 		grid-column-gap: 016px;
 		grid-row-gap: 016px;
 	}
-.home-third-section article{
-	margin-bottom: 0 !important;
-	width: 100% !important;
-	height: auto !important;
-	margin-left: 0;
+	.home-third-section article{
+		margin-bottom: 0 !important;
+		width: 100% !important;
+		height: auto !important;
+		margin-left: 0;
 }
 
 	.home-third-section article:nth-of-type(1){
@@ -849,13 +969,60 @@ header button:nth-of-type(1) {
 		grid-area: 2 / 1 / 4 / 2;
 	}
 	.home-third-section article:nth-of-type(5){
-		grid-area: 5 / 1 / 6 / 2;
+		grid-area: 4 / 1 / 6 / 2;
 	}
 	.grid-wrapper > video {
-		grid-area: 5 / 2 / 6 / 3; 
+		grid-area: 4 / 2 / 6 / 3; 
 		width: 100%;
 		display: block;
 		border-radius: 1em;
+	}
+
+	.home-seventh-section > ul{
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(16, 70px);
+		grid-column-gap: 16px;
+		grid-row-gap: 16px;
+	}
+	.home-seventh-section > ul > li {
+		width: 100% !important;
+		height: auto !important;
+		margin-bottom: 0;
+	}
+ 	.home-seventh-section > ul > li h4 {
+		transform: none !important;
+	}
+		
+	.home-seventh-section > ul > li:nth-of-type(1) {
+		grid-area: 2 / 1 / 5 / 4;
+	}
+	.home-seventh-section > ul > li:nth-of-type(2) {
+		grid-area: 5 / 2 / 9 / 4;
+	}
+	.home-seventh-section > ul > li:nth-of-type(3) {
+		grid-area: 9 / 1 / 17 / 4;
+	}
+	.home-seventh-section > ul > li:nth-of-type(3) img{
+		width: 70%;
+	}
+	.home-seventh-section > ul > li:nth-of-type(3) video {
+		object-fit: contain;
+	}
+	.home-seventh-section > ul > li:nth-of-type(4) {
+		grid-area: 1 / 4 / 9 / 7;
+	}
+	.home-seventh-section > ul > li:nth-of-type(5) {
+		grid-area: 9 / 4 / 13 / 6;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.home-seventh-section > ul > li:nth-of-type(5) > ul > li {
+		font-size: .7rem;
+	}
+	.home-seventh-section > ul > li:nth-of-type(6) {
+		grid-area: 13 / 4 / 16 / 7;
 	}
  }
 
@@ -882,6 +1049,10 @@ header button:nth-of-type(1) {
 		font-family: Roobert, "Arial"; 
 		color: white;
 		font-size: 1em;
+	}
+
+	.footer-container {
+		grid-template-columns: repeat(4,1fr);
 	}
  }
 
@@ -913,5 +1084,12 @@ header button:nth-of-type(1) {
 
  - waar komt extra gap in mijn grid vandaan?
  - Mogen videos autoplayen?
+ 	- bij scroll (interactie)
  - Section van grote lijst is dat section of niet?
+
+
+
+ - intersection observer
+ - heading onzichtbaar maken
+ - :not (last-child)
  */

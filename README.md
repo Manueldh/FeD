@@ -242,6 +242,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   1. https://bennettfeely.com/clippy/ (voor alle clip-paths)
   2. https://www.youtube.com/watch?v=X7IBa7vZjmo&t=237s (voor de scrolltriggers)
-  3. ...
+  3. https://chatgpt.com/share/674e140f-8794-8007-a9f2-bb403ebd86f7 (versimpelen code)
 
 </details>

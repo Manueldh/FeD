@@ -46,6 +46,10 @@
 	--blue: #5543FF;
 }
 
+html {
+	scroll-snap-type: y proximity;
+	scroll-behavior: smooth;
+}
 
 body {
 	background-color: var(--light-blue);
@@ -156,8 +160,12 @@ header {
 header a {
 	z-index: 5;
 }
+header a:nth-of-type(1) {
+	background-color: transparent;
+	padding: 0;
+}
 
-header a:nth-of-type(2) {
+header a:nth-of-type(3) {
 	margin-right: auto;
 }
 
@@ -796,6 +804,7 @@ footer h2 {
 	display: flex;
 	gap: 40px;
 	margin-bottom: .5em;
+
 }
 .partners li p {
 	width: 7%;
@@ -954,8 +963,8 @@ footer h2 {
 }
 .about-first-section img {
 	width: 100%;
-	transform: scale(1.4);
-	object-position: 20% 100%;
+	transform: scale(1.8);
+	object-position: 50% 100%;
 	object-fit: cover;
 }
 
@@ -1009,7 +1018,6 @@ footer h2 {
 .about-fourth-section {
 	position: relative;
 	color: white;
-	scroll-snap-type: y mandatory;
 }
 
 .about-fourth-section article {
@@ -1018,6 +1026,7 @@ footer h2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	scroll-snap-align: start;
 }
 .about-fourth-section article h2 {
 	text-align: start;
@@ -1069,6 +1078,30 @@ footer h2 {
 	margin-left: auto;
 	margin-right: auto;
 	clip-path: polygon(9% 5%, 93% 0, 100% 100%, 0 97%);
+}
+
+.bike-image-container {
+	transform-origin: center;
+	width: 90%;
+	overflow: visible;
+}
+
+.bike-image {
+	height: 600px;
+	width: 100%;
+	position: relative;
+}
+.bike-image img{
+	object-fit: cover;
+	position: absolute;
+	top: 0px;
+	transform: scale(1.3);
+}
+
+.bike-clip-path-holder {
+	clip-path: polygon(9% 5%, 93% 0, 100% 100%, 0 97%);
+	height: 600px;
+	width: 100%;
 }
 
 
@@ -1136,11 +1169,125 @@ footer h2 {
 		padding: 4em 20vw;
 	}
  }
-
 /* Medium devices (tablets, less than 992px) */
 @media (min-width: 992px) { 
+
+	.about-first-section {
+		padding: 4em 0em;
+	}
 	.about-first-section img{
-		transform: scale(1.5);
+		transform: scale(1);
+	}
+	.img-clippath {
+		width: 105vw;
+	}
+	.about-second-section {
+		padding: 20em 20vw 10em 20vw;
+	}
+	.about-fourth-section {
+		padding: 4em 3em;
+	}
+	.partners {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 20em;
+	}
+	.partners > p {
+		margin-left: 0;
+		width: 30%;
+	}
+
+	.yellow-text {
+		color: var(--zentry-yellow);
+	}
+	
+	.about-fourth-section article{
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		width: 100%;
+	}
+	.about-fourth-section article h4 {
+		width: 60%;
+	}
+	.about-fourth-section article p {
+		width: 30%;
+	}
+	.bike-image-container {
+		height: 100%;
+	}
+
+	.about-fifth-section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.about-fifth-section article {
+		flex-direction: row;
+		align-items: center;
+		height: 95vh;
+		justify-content: center;
+		width: 70%;
+		padding: 10em 0;
+	}
+	.bike-image-container {
+		width: 130%
+	}
+	.about-fifth-section article h2, .about-fifth-section article h3, .about-fifth-section article p {
+		text-align: center;
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.about-fifth-section article img {
+		height: 100%;
+	}
+	.work {
+		padding: 5em 5em;
+		display: flex;
+		flex-direction: row;
+		gap: 1em;
+	}
+	.work article:nth-of-type(1) {
+		background-color: transparent ;
+		color: var(--light-blue);
+		border: .5px solid var(--light-blue);
+		transition: all .2s ease-in;
+	}
+	.work article:nth-of-type(1):hover{
+		background-color: var(--light-blue);
+		color: var(--black);
+		cursor: pointer;
+		border: none;
+	}
+	.work article:nth-of-type(1):hover button{
+		background-color: var(--black);
+		color: var(--light-blue);
+	}
+
+	.work article:nth-of-type(2){
+		margin: 0;
+		background-color: transparent ;
+		color: var(--light-blue);
+		border: .5px solid var(--light-blue);
+		transition: all .2s ease-in;
+	}
+	.work article button, .work article a {
+		background-color: var(--light-blue);
+		color: var(--black);
+		font-size: 1em;
+		transition: all .2s ease-in;
+	}
+	.work article:nth-of-type(2):hover{
+		background-color: var(--zentry-yellow);
+		color: var(--black);
+		cursor: pointer;
+		border: none;
+	}
+	.work article:nth-of-type(2):hover a{
+		background-color: var(--black);
+		color: var(--light-blue);
 	}
 	
 	.grid-wrapper{
@@ -1258,6 +1405,18 @@ footer h2 {
 
 /* X-Large devices (large desktops, less than 1400px) */
 @media (min-width: 1400px) {  }
+
+@media (min-width: 2000px) {  
+	.bike-clip-path-holder img {
+		object-position: center 15%;
+	}
+	.bike-clip-path-holder {
+		overflow: visible;
+	}
+	.bike-image > img {
+		object-position: center 15%;
+	}
+}
 
 
 

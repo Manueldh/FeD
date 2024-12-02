@@ -55,7 +55,7 @@ ScrollTrigger.create({
 
 ScrollTrigger.create({
     trigger: ".about-fifth-section",
-    start: "top center",
+    start: "20% center",
     end: "bottom center",
     toggleClass: {
         targets: "body",
@@ -66,8 +66,8 @@ ScrollTrigger.create({
 
 ScrollTrigger.create({
     trigger: ".black-bg-section",
-    start: "top center",
-    end: "bottom center",
+    start: "10% bottom",
+    end: "90% bottom",
     toggleClass: {
         targets: "body",
         className: "black-bg"
@@ -81,9 +81,26 @@ gsap.to(".img-clippath", {
     ease: "power2.inOut",
     scrollTrigger: {
       trigger: ".about-first-section",
-      start: "center center",
-      end: "bottom center",
+      start: "45% center",
+      end: "80% center",
       scrub: true, // Voor een vloeiende animatie
-      markers: true,
+    //   markers: true,
     },
   });
+
+
+  // for loop gemaatk door chatGPT: https://chatgpt.com/share/674e140f-8794-8007-a9f2-bb403ebd86f7
+  const listItems = document.querySelectorAll(".partners ul li");
+
+  for (let i = 0; i < listItems.length; i++) {
+    ScrollTrigger.create({
+      trigger: `.partners ul li:nth-of-type(${i + 1})`,
+      start: "top center",
+      end: "bottom center",
+      toggleClass: {
+        targets: listItems[i],
+        className: "yellow-text"
+      },
+      markers: true
+    });
+  }

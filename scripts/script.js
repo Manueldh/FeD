@@ -50,7 +50,7 @@ ScrollTrigger.create({
         video.currentTime = 0;
         video.pause();
     },
-    markers: true
+    // markers: true
 })
 
 ScrollTrigger.create({
@@ -61,7 +61,7 @@ ScrollTrigger.create({
         targets: "body",
         className: "blue-bg"
     },
-    markers: true
+    // markers: true
 })
 
 ScrollTrigger.create({
@@ -72,7 +72,18 @@ ScrollTrigger.create({
         targets: "body",
         className: "black-bg"
     },
-    markers: true
+    // markers: true
 })
 
-console.log("test")
+gsap.to(".img-clippath", {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    scale: 0.9,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: ".about-first-section",
+      start: "center center",
+      end: "bottom center",
+      scrub: true, // Voor een vloeiende animatie
+      markers: true,
+    },
+  });

@@ -10,68 +10,69 @@ closeBtn.addEventListener("click", closeMenu)
 function openMenu() {
     headerNav.classList.add("toonMenu")
     burgerBtn.classList.add("removeBtn")
-    // firstNavBtn.classList.add("showBtn")
-    // secondNavBtn.classList.add("showBtn")
+    firstNavBtn.classList.add("showBtn")
+    secondNavBtn.classList.add("showBtn")
     closeBtn.classList.remove("removeBtn")
 }
 
 function closeMenu() {
     headerNav.classList.remove("toonMenu")
     burgerBtn.classList.remove("removeBtn")
-    // closeBtn.classList.add("removeBtn")
-    // firstNavBtn.classList.remove("showBtn")
+    closeBtn.classList.add("removeBtn")
+    firstNavBtn.classList.remove("showBtn")
     secondNavBtn.classList.remove("showBtn")
 }
 
 
+gsap.registerPlugin(ScrollTrigger);
 
-// const sections = document.querySelectorAll('.home-fifth-section');
 
-// let activeIndex = 0; // Houd bij welke section actief is
-// let lastScrollY = 0; // Houd de vorige scrollpositie bij
-// let scrollThreshold = 300; // Minimum scrollafstand voordat de sectie van sticky verandert
+const video = document.querySelector(".about-fourth-section video");
+// video.playbackRate = 3;
+ScrollTrigger.create({
+    trigger: ".about-fourth-section",
+    start: "top center",
+    end: "bottom center",
+    toggleClass: {
+        targets: ".about-fourth-section video",
+        className: "show-video"
+    },
+    onEnter: () => {
+        video.play()
+    },
+    onLeave: () => {
+        video.pause(); 
+    },
+    onEnterBack: () => {
+        video.play()
+    },
+    onLeaveBack: () => {
+        video.currentTime = 0;
+        video.pause();
+    },
+    markers: true
+})
 
-// // Stel initiële zichtbaarheid in
-// sections.forEach((section, index) => {
-//   section.style.display = index === activeIndex ? 'block' : 'none';
-// });
+ScrollTrigger.create({
+    trigger: ".about-fifth-section",
+    start: "top center",
+    end: "bottom center",
+    toggleClass: {
+        targets: "body",
+        className: "blue-bg"
+    },
+    markers: true
+})
 
-// // Scroll event listener
-// window.addEventListener('scroll', () => {
-//   const currentScrollY = window.scrollY;
-//   const currentSection = sections[activeIndex];
-//   const nextSection = sections[activeIndex + 1];
-//   const prevSection = sections[activeIndex - 1];
+ScrollTrigger.create({
+    trigger: ".black-bg-section",
+    start: "top center",
+    end: "bottom center",
+    toggleClass: {
+        targets: "body",
+        className: "black-bg"
+    },
+    markers: true
+})
 
-//   const rect = currentSection.getBoundingClientRect();
-
-//   // Controleer of de sectie bovenaan het scherm is
-//   if (rect.top <= 0) { // De sectie is bovenaan het scherm
-
-//     // Naar beneden scrollen
-//     if (currentScrollY > lastScrollY) {
-//       if (rect.bottom <= window.innerHeight && nextSection && currentScrollY - lastScrollY >= 200 && currentScrollY >= scrollThreshold) {
-//         // Schakel naar de volgende sectie
-//         currentSection.classList.remove('sticky');
-//         currentSection.style.display = 'none';
-//         nextSection.style.display = 'block';
-//         nextSection.classList.add('sticky');
-//         activeIndex++;
-//         lastScrollY = currentScrollY; // Reset scrollpositie
-//       }
-//     }
-
-//     // Naar boven scrollen
-//     if (currentScrollY < lastScrollY) {
-//       if (rect.top >= 0 && prevSection && lastScrollY - currentScrollY >= 200 && currentScrollY <= scrollThreshold) {
-//         // Schakel naar de vorige sectie
-//         currentSection.classList.remove('sticky');
-//         currentSection.style.display = 'none';
-//         prevSection.style.display = 'block';
-//         prevSection.classList.add('sticky');
-//         activeIndex--;
-//         lastScrollY = currentScrollY; // Reset scrollpositie
-//       }
-//     }
-//   }
-// });
+console.log("test")

@@ -57,11 +57,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
-  - Je moet heel veel zelf doen op de website (scrollen), waardoor je langer doet om door de website heen te gaan als je concentratieproblemen hebt. Ook zijn er op heel veel plekken in 1 viewport info te vinden waardoor je op veel plekken moet gaan rondkijken dat is ook lastiger als je geen concentratie hebt.
-  - De afbeeldingen zijn helemaal schermvullend dus moet je veel rondkijken als je de bril op hebt met een klein gaatje.
-  - Met een spasmes/parkinson nabootser is het vrijwel onmogelijk om op een website goed rond te navigeren
+  -  Met een gaatjesbril is de website nogsteeds prima te navigeren, het is uiteraard wel een stuk lastiger maar alle elementen staan niet op heel veel verschillende plekken dus moet je niet veel rondkijken op het scherm
+  - Omdat er niet teveel elementen per sectie zijn is het ook niet heel moeilijk om de website door te navigeren als je concentratieproblemen hebt. Ook helpt het voor mijn gevoel dat er een animatie is op elementen als ze in je viewport komen waardoor je een soort van begeleid wordt met waar je naar moet kijken. Wel kunnen die juist ook wel afleidend zijn, zo is er bij een bepaalde sectie altijd een gifje op loop aan het afspelen is die best groot in beeld staat. En staat de tekst die daar gelezen moet worden linksonder in het klein. 
+  - Met een spasmes/parkinson nabootser is het vrijwel onmogelijk om op een website uberhaupt goed rond te navigeren, dus dit was ook het geval op mijn website. Ik had de spasme nabootser wel op een best heftige stand staan dus dat was sowieso al moeilijk, als het een wat lichtere versie was was het wel goed mogelijk geweest om rond te navigeren op mijn website. Ook omdat knoppen vaak niet bij elkaar in de buurt staan. 
+  - De voiceover op mijn site werkte niet heel goed. Zo worden alle heading in stukjes opgelezen omdat er in de tekst speciale letters zitten. Dus bij bijvoorbeeld "discover" is de letter o een speciale letter (qua font) dus leest de voiceover het op als disc-o-ver. Dit werkt dus niet heel goed. De broodteksten die er zijn worden wel goed opgelezen.
 
-  - De voiceover op mijn site werkte niet heel goed maar dat kwam denk ik omdat ik de controls niet snap, als ik er door heen tabte ging hij namelijk alleen maar naar alle linkjes toe en niet naar het volgende element.
 </details>
 
 
@@ -72,13 +72,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/home-breakdown.jpg" width="375px" alt="breakdown van de hele home pagina">
 
-  ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  ### about pagina: 
+  <img src="readme-images/about-breakdown.jpg" width="375px" alt="breakdown van de hele about pagina">
 
 </details>
 
@@ -92,26 +89,36 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik heb de HTML van de homepagina gemaakt alleen twijfel ik nog of sommige dingen semantisch zijn. Ook heb ik nog niet heel duidelijk wanneer ik wel een div mag gebruiken en wanneer niet. Zo weet ik bijvoorbeeld niet hoe ik de zwarte blokjes (zie afbeelding) moet gaan doen in de HTML. 
+  <img src="readme-images/week1-punt.png" width="375px" alt="stuk waar ik vastliep">
 
+Ook twijfel ik nog of ik sommige secties wel echt een section mag noemen aangezien ze niet beginnen met een heading.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Manuel         | Vincent            | Nerusha      | student 4        |
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
+Punten Manuel: 
+- Wanneer div?
+- Mogen background images?
+- Sections zonder heading.
+
+
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Ik moet de title en favicon nog aanpassen.
+  - In mijn header heb ik de video voor de h1 gezet.
+  - Kleine articles moeten list items worden
+  - Per section een class maken zodat je niet heel veel classes hebt.
+  - Divjes mogen bij stijling
+  - Background images mag je niet gebruiken
 
 </details>
 
@@ -125,7 +132,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik ben nu bezig met de CSS en heb ook al het hamburgermenu met javascript gemaakt. Ik moet mij voor nu gaan focussen op het responsive maken en daarna wil ik verder gaan werken aan de javascript en de effecten gaan toevoegen.
 
 
   ### Agenda voor meeting
@@ -148,10 +155,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Extra gap in grid komt omdat ik een rij teveel had in mijn grid.
+  - Ik kan intersection observer gebruiken voor animaties die bij scrollen komt. 
+  - Videos kunnen op autoplay nadat er een actie is uitgevoerd (dus bv scrollen).
+  - Ik kan vaker gebruik maken van :not en dan last child. 
+  - Consistent coderen, dus niet een mix van px en em's maar alleen maar em als groottes.
 
 </details>
 
@@ -166,6 +174,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  - Mn close hamburger menu button wordt opgelezen terwijl die niet zichtbaar is.
+  - Door de buttons heen tabben werkt heel goed. Alles wordt ook duidelijk voorgelezen.
+  - Tekst oplezen met span in de tekst werkt heel slecht.
+  - Er is een stuk tekst op de homepagina waar afbeeldingen tussen door gaan, deze worden door de screenreader opgelezen waardoor tussen de tekst door waardoor je de tekst niet goed hoort.
+  - Mijn site komt wel door de validator die van Zentry totaal niet. 
+  - Ik heb 1 h1 per pagina, de site van Zentry niet. 
+  - Al mijn afbeeldingen hebben een alt tag, die van Zentry niet. 
+  - Mijn website support een light/dark mode, die van Zentry niet. 
 
 </details>
 
@@ -191,6 +207,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
+  Punten Manuel:
+  - ScrollTrigger breekt bij resizen of refreshen.
+
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
@@ -210,7 +229,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 <details>
   <summary>uitwerken voor eindgesprek</summary>
-
+ 
   ### Je uitkomst - karakteristiek screenshots:
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
 
@@ -243,5 +262,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   1. https://bennettfeely.com/clippy/ (voor alle clip-paths)
   2. https://www.youtube.com/watch?v=X7IBa7vZjmo&t=237s (voor de scrolltriggers)
   3. https://chatgpt.com/share/674e140f-8794-8007-a9f2-bb403ebd86f7 (versimpelen code)
+  4. https://sdust.dev/posts/2024-06-24_We-spent-six-days-on-this-GSAP-resize-bug.html , https://chatgpt.com/share/6750355c-ddd4-8007-92d3-999e1470c14c (bug weghalen)
+  5. https://cssgrid-generator.netlify.app/
+  6. https://bennettfeely.com/clippy/
+  7. 
 
 </details>

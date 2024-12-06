@@ -7,6 +7,7 @@ const secondNavBtn = document.querySelector("#secondBtn")
 burgerBtn.addEventListener("click", openMenu)
 closeBtn.addEventListener("click", closeMenu)
 
+
 function openMenu() {
     headerNav.classList.add("toonMenu")
     burgerBtn.classList.add("removeBtn")
@@ -23,9 +24,39 @@ function closeMenu() {
     secondNavBtn.classList.remove("showBtn")
 }
 
+// window.onbeforeunload = function (e) {
+//    ScrollTrigger.refresh();
+// };
+
+// Tot en met cleanup gegenereerd door ChatGPT om een bug weg te halen. Met behulp van een artikel van sdust.dev
+
+// Debounce-functie om het aantal calls te beperken
+// function debounce(func, wait) {
+//     let timeout;
+//     return function (...args) {
+//       clearTimeout(timeout);
+//       timeout = setTimeout(() => func.apply(this, args), wait);
+//     };
+//   }
+  
+//   // Resize event listener
+//   const onResize = debounce(() => {
+//     ScrollTrigger.refresh();
+//   }, 1500);
+  
+//   // Voeg event listener toe bij het laden van de pagina
+//   window.addEventListener('resize', onResize);
+  
+//   // Roep de functie meteen aan om de initialisatie te forceren
+//   onResize();
+  
+//   // Zorg ervoor dat je de event listener verwijdert als dat nodig is
+//   // Bijvoorbeeld bij dynamische pagina's:
+//   function cleanup() {
+//     window.removeEventListener('resize', onResize);
+//   }
 
 gsap.registerPlugin(ScrollTrigger);
-
 
 const video = document.querySelector(".about-fourth-section video");
 // video.playbackRate = 3;
@@ -55,7 +86,7 @@ ScrollTrigger.create({
 
 ScrollTrigger.create({
     trigger: ".about-fifth-section",
-    start: "20% center",
+    start: "top center",
     end: "bottom center",
     toggleClass: {
         targets: "body",
@@ -66,13 +97,13 @@ ScrollTrigger.create({
 
 ScrollTrigger.create({
     trigger: ".black-bg-section",
-    start: "10% bottom",
-    end: "90% bottom",
+    start: "10% center",
+    end: "end center",
     toggleClass: {
         targets: "body",
         className: "black-bg"
     },
-    // markers: true
+    markers: true
 })
 
 gsap.to(".img-clippath", {
@@ -84,7 +115,7 @@ gsap.to(".img-clippath", {
       start: "45% center",
       end: "80% center",
       scrub: true, // Voor een vloeiende animatie
-    //   markers: true,
+      markers: true,
     },
   });
 
@@ -104,3 +135,5 @@ gsap.to(".img-clippath", {
     //   markers: true
     });
   }
+
+

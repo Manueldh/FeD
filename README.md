@@ -210,6 +210,9 @@ Punten Manuel:
   Punten Manuel:
   - ScrollTrigger breekt bij resizen of refreshen.
 
+  Punten Vincent:
+  - 
+
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen

@@ -11,8 +11,9 @@ ScrollTrigger.create({
     toggleClass: {
         targets: "body",
         className: "light-blue-bg"
-    },
-    markers: true
+    }
+    ,
+    // markers: true
 })
 
 imageInText.forEach(x => {

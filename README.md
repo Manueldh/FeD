@@ -195,7 +195,7 @@ Punten Manuel:
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Op het moment ben ik heel veel aan het klooien met de scrollTrigger. Soms werkt het wel goed maar vaak ook niet. Wanneer ik nu mn scherm resize, of de pagina refresh lijkt het alsof de scrollTrigger markers verplaatst worden waardoor het niet meer goed werkt. Voorderest ben ik eigenlijk zo goed als klaar en moet ik nog wat kleine dingetjes doen zoals states voor de knoppen toevoegen en mijn classes wat betere namen geven.
 
 
   ### Agenda voor meeting
@@ -210,17 +210,13 @@ Punten Manuel:
   Punten Manuel:
   - ScrollTrigger breekt bij resizen of refreshen.
 
-  Punten Vincent:
-  - 
-
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Er zijn een paar duplicated corrupted files die ik moet verwijderen
+  - Als er tijd is even kijken naar de scrollTrigger met ChatGPT, ik kan dan de documentatie van de scrollTrigger in chat gooien om te kijken of er dan een oplossing is voor mijn resize/refresh probleem.
+  - Meerdere Javascript files maken zodat het geen errors geeft in de console als het iets van een andere pagina probeert te vinden.
 
 </details>
 

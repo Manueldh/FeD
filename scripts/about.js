@@ -1,13 +1,13 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const video = document.querySelector(".about-fourth-section video");
-// video.playbackRate = 3;
+const video = document.querySelector(".architecture video");
+video.playbackRate = 3;
 ScrollTrigger.create({
-    trigger: ".about-fourth-section",
+    trigger: ".architecture",
     start: "top center",
     end: "bottom center",
     toggleClass: {
-        targets: ".about-fourth-section video",
+        targets: ".architecture video",
         className: "show-video"
     },
     onEnter: () => {
@@ -27,7 +27,7 @@ ScrollTrigger.create({
 })
 
 ScrollTrigger.create({
-    trigger: ".about-fifth-section",
+    trigger: ".about-zentry",
     start: "top center",
     end: "bottom center",
     toggleClass: {
@@ -43,10 +43,31 @@ gsap.to(".img-clippath", {
     scale: 0.9,
     ease: "power2.inOut",
     scrollTrigger: {
-      trigger: ".about-first-section",
+      trigger: ".about-hero",
       start: "45% center",
       end: "80% center",
-      scrub: true, // Voor een vloeiende animatie
-      markers: true,
+      scrub: true, 
+    //   markers: true,
     },
   });
+
+ScrollTrigger.create({
+    trigger: ".about-introducing",
+    start: "30% center",
+    end: "bottom center",
+    toggleClass: {
+        targets: "body",
+        className: "light-blue-bg"
+    },
+    // markers: true
+})
+ScrollTrigger.create({
+    trigger: ".our-mission",
+    start: "top center",
+    end: "bottom center",
+    toggleClass: {
+        targets: "body",
+        className: "light-blue-bg"
+    },
+    // markers: true
+})

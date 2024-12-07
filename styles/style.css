@@ -1147,6 +1147,9 @@ footer h2 {
 .architecture article h2 {
 	text-align: start;
 }
+.architecture h2 {
+	color: var(--light-blue);
+}
 .architecture h3 {
 	color: var(--light-blue);
 }

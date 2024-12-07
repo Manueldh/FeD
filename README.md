@@ -178,10 +178,16 @@ Punten Manuel:
   - Door de buttons heen tabben werkt heel goed. Alles wordt ook duidelijk voorgelezen.
   - Tekst oplezen met span in de tekst werkt heel slecht.
   - Er is een stuk tekst op de homepagina waar afbeeldingen tussen door gaan, deze worden door de screenreader opgelezen waardoor tussen de tekst door waardoor je de tekst niet goed hoort.
-  - Mijn site komt wel door de validator die van Zentry totaal niet. 
+  - Mijn site komt wel door de validator die van Zentry totaal niet. Ik heb wel nog 3 errors maar heb van alles geprobeerd en kon dit niet meer oplossen, heb het er nu even ingelaten om een javascript interactie erbij te hebben.
   - Ik heb 1 h1 per pagina, de site van Zentry niet. 
   - Al mijn afbeeldingen hebben een alt tag, die van Zentry niet. 
   - Mijn website support een light/dark mode, die van Zentry niet. 
+
+  <img src="readme-images/p1.jpg" width="375px" alt="a11y test pagina 1">
+  <img src="readme-images/p2.jpg" width="375px" alt="a11y test pagina 2">
+  <img src="readme-images/p3.jpg" width="375px" alt="a11y test pagina 3">
+  <img src="readme-images/p4.jpg" width="375px" alt="a11y test pagina 4">
+  <img src="readme-images/p5.jpg" width="375px" alt="a11y test pagina 5">
 
 </details>
 
@@ -230,19 +236,23 @@ Punten Manuel:
   <summary>uitwerken voor eindgesprek</summary>
  
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/eindversie.png" width="375px" alt="uitkomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Ik heb heel erg veel geleerd over responsiveness en ben trots dat dit eigenlijk heel goed is gegaan. Hierbij was het leren van Grid ook erg handig aangezien ik voor dit vak eigenlijk vooral de neiging had om alles te flexen en hierbij heel veel divjes te gebruiken. 
+  <img src="readme-images/responsive.png" width="375px" alt="responsive">
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
-
+  Ook heb ik veel geleerd over de Javascript library GSAP met ScrollTrigger. Het meeste van mijn tijd heeft denk ik hierin gezeten aangezien dit niet heel soepel ging en het best buggy was vaak. Uiteindelijk werken de scrolltriggers wel redelijk en ben ik er trots op dat ik hiermee iets heb kunnen neerzetten. 
+  <img src="readme-images/gsap-scrolltrigger.png" width="375px" alt="gsap scrolltrigger">
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Omdat ik nog veel moeite had met GSAP is dit nogsteeds niet helemaal gelukt, zo werkt het nogsteeds niet heel soepel zodra je de pagina gerefreshed hebt of hebt geresized, dit vind ik erg jammer en ben ook eigenlijk teveel tijd gaan stoppen in het oplossen van deze "bug" waardoor ik andere dingen minder goed heb kunnen uitwerken.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Ook wilde ik graag nog een stukje maken waar ik de tijd niet meer voor had, dit stukje wordt volgensmij ook gemaakt door ScrollTrigger en kwam 2x voor. Het was namelijk dat de content van een section werdt veranderd bij het scrollen
+  <img src="readme-images/niet-gelukt.png" width="375px" alt="bummer">
+
+
 </details>
 
 

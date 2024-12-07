@@ -51,7 +51,7 @@ ScrollTrigger.create({
         targets: listItems[i],
         className: "yellow-text"
       },
-      markers: true
+      // markers: true
     });
   }
 

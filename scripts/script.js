@@ -61,12 +61,12 @@ gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.create({
     trigger: ".black-bg-section",
     start: "10% bottom",
-    end: "90% bottom",
+    end: "90% 30%",
     toggleClass: {
         targets: "body",
         className: "black-bg"
     },
-    markers: true
+    // markers: true
 })
 
 

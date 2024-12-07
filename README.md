@@ -183,11 +183,11 @@ Punten Manuel:
   - Al mijn afbeeldingen hebben een alt tag, die van Zentry niet. 
   - Mijn website support een light/dark mode, die van Zentry niet. 
 
-  <img src="readme-images/p1.jpg" width="375px" alt="a11y test pagina 1">
-  <img src="readme-images/p2.jpg" width="375px" alt="a11y test pagina 2">
-  <img src="readme-images/p3.jpg" width="375px" alt="a11y test pagina 3">
-  <img src="readme-images/p4.jpg" width="375px" alt="a11y test pagina 4">
-  <img src="readme-images/p5.jpg" width="375px" alt="a11y test pagina 5">
+  <img src="readme-images/p1.JPG" width="375px" alt="a11y test pagina 1">
+  <img src="readme-images/p2.JPG" width="375px" alt="a11y test pagina 2">
+  <img src="readme-images/p3.JPG" width="375px" alt="a11y test pagina 3">
+  <img src="readme-images/p4.JPG" width="375px" alt="a11y test pagina 4">
+  <img src="readme-images/p5.JPG" width="375px" alt="a11y test pagina 5">
 
 </details>
 
